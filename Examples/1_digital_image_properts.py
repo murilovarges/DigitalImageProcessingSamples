@@ -9,6 +9,8 @@ def main():
     print(image.format)
     print(image.size)
     print(image.mode)
+    print(image.bits)
+    print(image.getextrema())
     # convert image to numpy array    
     npImage = np.array(image) 
     print(type(npImage ))
