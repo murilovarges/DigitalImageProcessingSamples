@@ -20,10 +20,21 @@ def main():
     # value of pixel 0 0
     print(npImage[0][0])
     print(npImage[10][10])
+
+    # values os a windows 5 X 5 
+    print(npImage[0:5, 0:5])
+
+    # divide by 2 pixels
+    npImage =  (npImage / 2).astype(int);
+
+    # values os a windows 5 X 5 
+    print(npImage[0:5, 0:5])
     
-    #Change values os lines 10 - 25
+    #Change values of lines 10 - 25
     npImage[10:25,:] = 255;
-    print(npImage[10][10])
+
+    #Change values of columns 10 - 25
+    npImage[:,10:25] = 0;
 
     #Convert ndarray image to Pillow image
     image2 = Image.fromarray(npImage)
