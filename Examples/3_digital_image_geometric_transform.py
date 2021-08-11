@@ -25,6 +25,18 @@ def main():
     image_out = Image.fromarray(image_np_rotate)
     image_out.show()    
 
+    # Shear image
+    height, width = image_np.shape
+    transform = [[1, 0, 0],
+                 [0.5, 1, 0],
+                 [0, 0, 1]]
+    image_np_shear = ndimage.affine_transform(image_np,
+                                         transform,
+                                         offset=(0, -height//2, 0),
+                                         output_shape=(height, width+height//2))
+    image_out = Image.fromarray(image_np_shear)
+    image_out.show()    
+
 
 if __name__ == "__main__":
     main()
