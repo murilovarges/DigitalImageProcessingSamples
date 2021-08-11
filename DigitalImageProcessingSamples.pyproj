@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cf80dbdf-1789-4069-9eab-980c6f23a615</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Examples\3_digital_image_geometric_transform.py</StartupFile>
+    <StartupFile>Examples\2_digital_image_neighborhood_mean.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

@@ -1,4 +1,4 @@
-
+# Basic images functions
 import numpy as np
 from PIL import Image  
 from numpy import asarray
@@ -38,7 +38,7 @@ def main():
 
     # Create negative image
     npImageNegative = np.array(image) 
-    npImageNegative = np.abs(255 - npImageNegative);
+    npImageNegative = 255 - npImageNegative;
     # values os a windows 5 X 5 
     print(npImageNegative[0:5, 0:5])
 

@@ -1,5 +1,4 @@
 # Image Geometric transforms
-
 import numpy as np
 from numpy import asarray
 from PIL import Image
@@ -21,7 +20,7 @@ def main():
     image_out.show()
         
     # Rotation image 45º
-    image_np_rotate  = ndimage.rotate(image_np, 45, cval=128)
+    image_np_rotate  = ndimage.rotate(image_np, -45, cval=128)
     image_out = Image.fromarray(image_np_rotate)
     image_out.show()    
 

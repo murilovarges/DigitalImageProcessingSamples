@@ -13,11 +13,15 @@ def main():
     # values os a windows 5 X 5 
     print(npImage[0:5, 0:5])
 
-    m = npImage.shape[0]
-    n = npImage.shape[1]
+    m = npImage.shape[0] # qtd lines
+    n = npImage.shape[1] # qtd cols
     for x in range(1, m-2):
-        for y in range (1, n-3):
-            npImage[x,y] = np.mean(npImage[x-1:x+2,y-1:y+2]).astype(int);
+        for y in range (1, n-2):
+            w = npImage[x-1:x+2 , y-1:y+2]
+            #print(x,y)
+            #print(w)
+            #print(np.mean(w).astype(int))
+            npImage[x,y] = np.mean(w).astype(int)
     
     # values os a windows 5 X 5 
     print(npImage[0:5, 0:5])        
