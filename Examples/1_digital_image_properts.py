@@ -36,9 +36,19 @@ def main():
     #Change values of columns 10 - 25
     npImage[:,10:25] = 0;
 
+    # Create negative image
+    npImageNegative = np.array(image) 
+    npImageNegative = np.abs(255 - npImageNegative);
+    # values os a windows 5 X 5 
+    print(npImageNegative[0:5, 0:5])
+
     #Convert ndarray image to Pillow image
     image2 = Image.fromarray(npImage)
     image2.show()
+
+    #Convert ndarray image to Pillow image
+    image3 = Image.fromarray(npImageNegative)
+    image3.show()
 
     # create the histogram
     histogram, bin_edges = np.histogram(npImage, bins=256, range=(0, 255))

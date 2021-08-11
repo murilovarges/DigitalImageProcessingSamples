@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cf80dbdf-1789-4069-9eab-980c6f23a615</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Examples\1_digital_image_properts.py</StartupFile>
+    <StartupFile>Examples\3_digital_image_geometric_transform.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Examples\3_digital_image_geometric_transform.py" />
+    <Compile Include="Examples\2_digital_image_neighborhood_mean.py" />
     <Compile Include="Examples\1_digital_image_properts.py" />
   </ItemGroup>
   <ItemGroup>
