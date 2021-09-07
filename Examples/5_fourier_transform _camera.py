@@ -44,9 +44,8 @@ def opencamera():
         im1.set_data(frame_img)
         im2.set_data(fourier_img)
 
-        extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        plt.savefig('test.png')
-        fig.savefig('fourier.png', bbox_inches=extent)
+        extent = ax2.get_window_extent().transformed(fig.dpi_scale_trans.inverted())        
+        fig.savefig('images/fourier-spectro.png', bbox_inches=extent)
 
         plt.pause(0.01)
    
