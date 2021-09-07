@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cf80dbdf-1789-4069-9eab-980c6f23a615</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Examples\5_fourier_transform _camera.py</StartupFile>
+    <StartupFile>Examples\6_fourier_3d_view.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

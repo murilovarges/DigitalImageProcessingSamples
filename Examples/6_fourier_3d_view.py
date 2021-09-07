@@ -9,7 +9,7 @@ from skimage.color import rgb2hsv, rgb2gray, rgb2yuv
 def main():
     # load image
     #img = Image.open('images/lena.jpg')
-    img = Image.open('fourier.png')
+    img = Image.open('images/fourier-amplitude.png')
     if img.mode != 'L':
         img = rgb2gray(np.array(img))
         img = Image.fromarray(img)
