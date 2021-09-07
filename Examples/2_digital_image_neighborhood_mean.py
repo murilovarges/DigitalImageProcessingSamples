@@ -9,6 +9,7 @@ def main():
     image.show()
     # convert image to numpy array    
     npImage = np.array(image) 
+    npImageFilter = np.empty(npImage.shape)
 
     # values os a windows 5 X 5 
     print(npImage[0:5, 0:5])
@@ -21,12 +22,12 @@ def main():
             #print(x,y)
             #print(w)
             #print(np.mean(w).astype(int))
-            npImage[x,y] = np.mean(w).astype(int)
+            npImageFilter[x,y] = np.mean(w).astype(int)
     
     # values os a windows 5 X 5 
     print(npImage[0:5, 0:5])        
     #Convert ndarray image to Pillow image
-    image2 = Image.fromarray(npImage)
+    image2 = Image.fromarray(npImageFilter)
     image2.show()
 
 
