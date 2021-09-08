@@ -10,9 +10,15 @@ def main():
     plt.figure(num=None, figsize=(8, 6), dpi=80)
     plt.imshow(lena_image, cmap='gray')
 
-    lena_image_fourier = np.fft.fftshift(np.fft.fft2(lena_image))
-    plt.figure(num=None, figsize=(8, 6), dpi=80)
+    # transformada de fourier
+    lena_image_fourier = np.fft.fft2(lena_image)
+    plt.figure(num=None, figsize=(8, 6), dpi=80)    
     plt.imshow(np.log(abs(lena_image_fourier)), cmap='gray')
+
+    # centralização do espectro de fourie
+    lena_image_fourier_shift = np.fft.fftshift(lena_image_fourier)
+    plt.figure(num=None, figsize=(8, 6), dpi=80)
+    plt.imshow(np.log(abs(lena_image_fourier_shift)), cmap='gray')
 
     plt.show()
 

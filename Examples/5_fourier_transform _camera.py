@@ -25,7 +25,7 @@ def grab_frame(cap):
 
 def opencamera():
     # Initiate camera
-    cap1 = cv2.VideoCapture(1)
+    cap1 = cv2.VideoCapture(1) # mudar para 0 se tiver apenas uma camera
 
     # Create two subplots
     fig = plt.figure()
@@ -35,7 +35,6 @@ def opencamera():
     ax1.title.set_text('Original Image')
     ax2.title.set_text('Fourier Amplitude')
     ax3.title.set_text('Fourier Phase')
-
     
     # Create two image plots
     frame = grab_frame(cap1)
