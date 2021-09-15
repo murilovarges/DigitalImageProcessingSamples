@@ -9,8 +9,9 @@ def main():
     # Image filtered using ImageJ for comparison
     image_in = Image.open('images/lena_filtered1_imagej.tiff')
     image_np = np.array(image_in)
-    print('Image filtered in ImagJ')
+    print('Image filtered in ImageJ')
     print(image_np)
+    print(image_np.dtype)
     print(image_np.min(),image_np.max())
     
     # Open image
@@ -21,6 +22,7 @@ def main():
     image_np = np.array(image_in).astype(int) 
     print('Image original')    
     print(image_np)
+    print(image_np.dtype)
     print(image_np.min(),image_np.max())
 
     # Convolution filter usingo mode reflect
