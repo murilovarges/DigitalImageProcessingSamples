@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>cf80dbdf-1789-4069-9eab-980c6f23a615</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Examples\6_fourier_3d_view.py</StartupFile>
+    <StartupFile>Examples\4_digital_image_convolution.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,14 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Examples\6_fourier_3d_view.py">
+    <Compile Include="Examples\4_digital_image_convolution.py" />
+    <Compile Include="Examples\7_fourier_3d_view.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Examples\3_digital_image_geometric_transform.py" />
     <Compile Include="Examples\2_digital_image_neighborhood_mean.py" />
     <Compile Include="Examples\1_digital_image_properts.py" />
-    <Compile Include="Examples\5_fourier_transform _camera.py" />
-    <Compile Include="Examples\4_fourier_transform.py">
+    <Compile Include="Examples\6_fourier_transform _camera.py" />
+    <Compile Include="Examples\5_fourier_transform.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Examples\video_capture.py">
