@@ -35,10 +35,9 @@ def main():
   
   # define a video capture object
   vid = cv2.VideoCapture(0)
+  font = cv2.FONT_HERSHEY_SIMPLEX
   fps = vid.get(cv2.CAP_PROP_FPS)
-  format = vid.get(cv2.CAP_PROP_FORMAT)
-  print("FPS: {0}".format(fps))
-  print("Format: {0}".format(format))
+  print("FPS: {0}".format(fps)) 
   
   mask = mean
   while(True):        
@@ -48,6 +47,7 @@ def main():
     filteredImage = cv2.filter2D(src=gray, ddepth=-1, kernel=mask)    
     
     # Display the resulting frame      
+    cv2.putText(gray, "FPS: {0}".format(fps), (5,20), font, 0.5, 0, 1, cv2.LINE_AA)
     cv2.imshow('Original', gray)
     cv2.imshow('Filtered', filteredImage)    
     
