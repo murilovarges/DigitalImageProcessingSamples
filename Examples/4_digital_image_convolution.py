@@ -19,13 +19,13 @@ def main():
     image_in.show()
     # convert image to numpy array    
     # convert to int to allow negative values
-    image_np = np.array(image_in).astype(int) 
+    image_np = np.array(image_in).astype(int)
     print('Image original')    
-    print(image_np)
+    print(image_np[0:10,0:10])
     print(image_np.dtype)
     print(image_np.min(),image_np.max())
 
-    # Convolution filter usingo mode reflect
+    # Convolution filter using mode reflect
     kernel = np.array([[ 1, 0,-1],
                        [ 0, 0, 0],
                        [-1, 0, 1]])
