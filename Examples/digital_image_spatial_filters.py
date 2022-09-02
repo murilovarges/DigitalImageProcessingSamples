@@ -1,7 +1,25 @@
+from asyncio.windows_events import NULL
 import cv2
 import numpy as np
 
+global mask 
+global filter_name 
+
+def change_mask(new_mask, name):
+  global mask
+  mask = new_mask
+  global filter_name 
+  filter_name = name
+  print(name)
+  print(mask)
+
 def main():
+  # identity  
+  identity = np.array((
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0]), dtype="int")
+
   # mean  
   mean = np.array((
     [0.1111, 0.1111, 0.1111],
@@ -39,36 +57,39 @@ def main():
   fps = vid.get(cv2.CAP_PROP_FPS)
   print("FPS: {0}".format(fps)) 
   
-  mask = mean
+  global mask 
+  mask = identity
+  global filter_name
+  filter_name = 'Identity'
   while(True):        
     # Capture the video frame by frame
-    ret, frame = vid.read()
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    filteredImage = cv2.filter2D(src=gray, ddepth=-1, kernel=mask)    
+    ret, image = vid.read()
+    image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    image_gray = cv2.flip(image_gray, 1)
+    image_filtered = cv2.filter2D(src=image_gray, ddepth=-1, kernel=mask)    
     
     # Display the resulting frame      
-    cv2.putText(gray, "FPS: {0}".format(fps), (5,20), font, 0.5, 0, 1, cv2.LINE_AA)
-    cv2.imshow('Original', gray)
-    cv2.imshow('Filtered', filteredImage)    
+    cv2.putText(image_gray, "FPS: {0}".format(fps), (5,20), font, 0.5, 0, 1, cv2.LINE_AA)
+    cv2.imshow('Original', image_gray)
+    cv2.putText(image_filtered, filter_name, (5,20), font, 0.5, 125, 1, cv2.LINE_AA)
+    cv2.imshow('Filtered', image_filtered)    
     
     # the 'q' and ESC buttons are set as the quitting button
     key = cv2.waitKey(10)
     if key == 27 or key == ord('q'): 
       break
+    elif key == ord('i'):
+      change_mask(identity, 'Identity')
     elif key == ord('m'):
-      mask = mean
-    elif key == ord('l'):      
-      mask = laplacian
-      print(mask)      
+      change_mask(mean, 'Mean')
+    elif key == ord('l'): 
+      change_mask(laplacian, 'Laplacian')
     elif key ==ord('x'):
-      mask = sobelX
-      print(mask)
+      change_mask(sobelX, 'Sobel X')
     elif key == ord('y'):
-      mask = sobelY
-      print(mask)
+      change_mask(sobelY, 'Sobel Y')
     elif key == ord('b'):
-      mask = boost
-      print(mask)
+      change_mask(boost, 'Boost')
   # After the loop release the cap object
   vid.release()
   # Destroy all the windows
