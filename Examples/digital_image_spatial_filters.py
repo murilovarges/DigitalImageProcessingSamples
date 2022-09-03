@@ -2,9 +2,6 @@ from asyncio.windows_events import NULL
 import cv2
 import numpy as np
 
-global mask 
-global filter_name 
-
 def change_mask(new_mask, name):
   global mask
   mask = new_mask
