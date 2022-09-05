@@ -23,6 +23,12 @@ def main():
     [0.1111, 0.1111, 0.1111],
     [0.1111, 0.1111, 0.1111]), dtype="float")
 
+# gauss
+  gauss = np.array((
+    [0.0625, 0.125, 0.0625], 
+    [0.1250, 0.250, 0.1250],
+    [0.0625, 0.125, 0.0625]), dtype="float")
+    
   # construct the Laplacian kernel used to detect edge-like regions of an image
   laplacian = np.array((
     [0,  1, 0],
@@ -79,6 +85,8 @@ def main():
       change_mask(identity, 'Identity')
     elif key == ord('m'):
       change_mask(mean, 'Mean')
+    elif key == ord('g'):
+      change_mask(gauss, 'Gauss')
     elif key == ord('l'): 
       change_mask(laplacian, 'Laplacian')
     elif key ==ord('x'):
