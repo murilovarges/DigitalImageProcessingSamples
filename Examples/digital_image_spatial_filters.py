@@ -50,7 +50,7 @@ def main():
   # boost 
   boost = np.array((
     [ 0,  -1,  0],
-    [-1, 5.2, -1],
+    [-1, 5.7, -1],
     [ 0,  -1,  0]), dtype="float")
 
   
