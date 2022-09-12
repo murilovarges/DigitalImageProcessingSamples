@@ -21,7 +21,7 @@ def main():
     plt.figure(num=None, figsize=(8, 6), dpi=80, frameon=False)
     plt.axis('off')
     plt.imshow(np.log(abs(lena_image_fourier_shift)), cmap='gray')
-    plt.savefig('images/sinc-fourier-amplitude.png', bbox_inches='tight', pad_inches=0)
+    plt.savefig('images/woman-fourier-amplitude.png', bbox_inches='tight', pad_inches=0)
     
     plt.show()
 
