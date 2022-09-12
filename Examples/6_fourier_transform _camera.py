@@ -25,7 +25,7 @@ def grab_frame(cap):
 
 def opencamera():
     # Initiate camera
-    cap1 = cv2.VideoCapture(1) # mudar para 0 se tiver apenas uma camera
+    cap1 = cv2.VideoCapture(0) # mudar para 0 se tiver apenas uma camera
 
     # Create two subplots
     fig = plt.figure()
@@ -58,7 +58,7 @@ def opencamera():
         extent = ax3.get_window_extent().transformed(fig.dpi_scale_trans.inverted())        
         fig.savefig('images/fourier-phase.png', bbox_inches=extent)
 
-        plt.pause(0.01)
+        plt.pause(0.00001)
    
 
 if __name__ == "__main__":

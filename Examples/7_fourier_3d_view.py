@@ -9,7 +9,7 @@ from skimage.color import rgb2hsv, rgb2gray, rgb2yuv
 def main():
     # load image
     #img = Image.open('images/lena.jpg')
-    img = Image.open('images/fourier-amplitude.png')
+    img = Image.open('images/sinc-fourier-amplitude.png')
     if img.mode != 'L':
         img = rgb2gray(np.array(img))
         img = Image.fromarray(img)
@@ -25,7 +25,7 @@ def main():
     # create the figure
     fig = plt.figure()
     ax = fig.gca(projection='3d')
-    ax.plot_surface(xx, yy, img ,rstride=1, cstride=1, cmap=plt.cm.gray,linewidth=0)
+    ax.plot_surface(xx, yy, img ,rstride=1, cstride=1, cmap=plt.cm.hot,linewidth=0)
 
     # show it
     plt.show()
