@@ -1,4 +1,6 @@
-# Example of Math Morphology in Digital Image Processing
+# Example of Morphological Transformations
+# Course: Digital Image Processing
+# Bachelor in Computer Engineering
 # IFSP - Campus Birgui 2022
 # Professor Murilo Varges da Silva
 

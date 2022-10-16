@@ -1,3 +1,9 @@
+# Example of Fourier Transformations
+# Course: Digital Image Processing
+# Bachelor in Computer Engineering
+# IFSP - Campus Birgui 2022
+# Professor Murilo Varges da Silva
+
 import numpy as np
 from PIL import Image  
 import matplotlib.pyplot as plt
