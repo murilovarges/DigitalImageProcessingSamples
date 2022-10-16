@@ -14,7 +14,7 @@ def main():
   img_sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5)
   img_sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5)
   img_sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5)  
-  img_canny = cv2.Canny(image=img_blur, threshold1=50, threshold2=100)
+  img_canny = cv2.Canny(image=img_blur, threshold1=50, threshold2=150, apertureSize = 3)
 
   cv2.imshow('Original', img)
   cv2.imshow('Blur', img_blur)
