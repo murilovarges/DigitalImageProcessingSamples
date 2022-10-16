@@ -36,7 +36,7 @@ def main():
   img_canny = cv.Canny(image=img, threshold1=100, threshold2=200, apertureSize=3)  
   cv.imshow('Original', img)  
   cv.imshow('Canny', img_canny)
-  cv.imshow('Detected Circle -  Hough Transform', img_color) 
+  cv.imshow('Detected Circles -  Hough Transform', img_color) 
 
   cv.waitKey(0)
   cv.destroyAllWindows()
