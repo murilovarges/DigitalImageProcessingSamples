@@ -10,7 +10,7 @@ import numpy as np
 
 def main():
   # Reading image  
-  img_color = cv.imread('../../Images/pupil.jpg', cv.IMREAD_COLOR )  
+  img_color = cv.imread('../../Images/pupil.jpg', cv.IMREAD_COLOR)  
   img = cv.cvtColor(img_color, cv.COLOR_BGR2GRAY)
   
   # Equalize Histrogram and Blurring 
